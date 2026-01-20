@@ -1,0 +1,54 @@
+---
+title: "Chapter II"
+format:
+  html:
+    css: styles.css
+---
+
+Once happy with how the preview looks, it is time to deploy the course on a webpage that is available to everyone,
+not just a local rendering.
+
+We will use GitHub Actions to automatically deploy a web page based on the .qmd files we have created.
+
+First, you need to create a file:
+
+ `.github\workflows\publish.yml`
+
+```yaml
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+name: Quarto Publish
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+You then need to initialize the publishing process using the following command:
+
+```bash
+quarto publish
+```
+Select "GitHub Pages" as the provider, and then say "Yes" when asked to publish on the given URL.
+
+The deployment will now start by creating a new branch `gh-pages` by pushing all your material to the URL and you can see it in your browser.
+
+Finally, do not forget to commit your changes to the `main` branch as well by

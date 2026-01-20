@@ -41,7 +41,8 @@ The template is structured as follows:
 - A Quarto Markdown (.qmd) file `index.qmd` at the root of the course folder. This file contains a YAML header with the
 course title and authors (with affiliations and contact details). The rest of the file is the basic information to be 
 displayed on the course homepage.
-- 
+- An overall YAML (.yml) file `_quarto.yml` that contains informaiton on how the files are structured (homepage, chapters etc...). This will help during the compilation.
+- Folders with additional content (e.g. for the course pages)
 
 
 ## Live Examples
@@ -51,3 +52,7 @@ displayed on the course homepage.
 
 More examples will follow!
 
+
+## Deploy
+
+To use this template m

@@ -1,0 +1,31 @@
+---
+title: "Course Template using Python"
+subtitle: "Quarto template for complementary certificate of geomatics course"
+date: last-modified
+format:
+  html:
+    title-block-banner: "#D80669"
+
+author: 
+  - name: "Lecturer's name"
+    orcid: 0000-0000-4577-1972
+    affiliation:
+      - name: "Institute for Environmental Sciences, University of Geneva"
+        city: "Geneva"
+---
+
+## Welcome to this new course!
+
+Briefly describe what the course is about.
+
+## Learning Objective
+
+Define what students will gain by following this course
+
+## Course Structure
+
+Insert here a schedule and syllabus for the course
+
+## More information
+ 
+ Add contact details, external links and useful resources here

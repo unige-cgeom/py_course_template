@@ -1,0 +1,20 @@
+project:
+  type: website
+
+execute:
+  freeze: auto
+
+website:
+  title: "Template"
+  navbar:
+    background: "#D80669"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Course"
+        href: course/chapter1.qmd
+  sidebar:
+    - title: "Course Chapters"
+      contents:
+        - course/chapter1.qmd
+        - course/chapter2.qmd

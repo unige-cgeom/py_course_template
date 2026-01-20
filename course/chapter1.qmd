@@ -1,0 +1,97 @@
+---
+title: "Chapter I"
+format:
+  html:
+    css: styles.css
+---
+## Adding Content
+
+Populate your file with course content, figures and code snippets directly.
+
+For basic Markdown synthax tutorials, refer to the [Quarto Docs](https://quarto.org/docs/authoring/markdown-basics.html)
+
+### Figures
+
+To insert figures, use the following syntax
+
+`![UNIGE](images/unige.png)`
+
+This will display your image as:
+
+![UNIGE logo](images/unige.png)
+
+NB: to make sure the caption is aligned with the logo, create a `styles.css` file and add the following:
+
+```css
+figcaption {
+  text-align: center;
+}
+```
+
+And reference it in your YAML header:
+```yaml
+---
+title: "Chapter I"
+format:
+  html:
+    css: styles.css
+---
+```
+### Code
+To insert code snippets, use the following syntax:
+
+```{python}
+#| echo: fenced
+
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'}
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+
+This code will be executed when compiling the documents, and the plot will be displayed below the code.
+If you just want to show the code snippet without executing it, you should add ""#| eval: false
+" :
+
+```{python}
+#| echo: fenced
+#| eval: false
+
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'}
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+### Preview
+To preview the content, you can use the "Preview" button if you are working with VS Code.
+
+Alternatively, if you prefer using the command line, navigate to your project and type in:
+
+```bash
+quarto preview .\index.qmd
+```
+For a guide on how to deploy the course, [go to Chapter 2](chapter2.qmd)
