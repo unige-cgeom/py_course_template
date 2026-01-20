@@ -1,0 +1,16 @@
+
+# Runtime for executing Python chunks
+jupyter
+nbformat
+ipykernel
+
+# Scientific packages used in your .qmd files
+numpy
+matplotlib
+pandas
+
+# (Optional) Add others as needed
+# seaborn
+# scipy
+# xarray
+# netCDF4
