@@ -244,11 +244,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">target</span><span class="kw">:</span><span class="at"> gh-pages</span></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">env</span><span class="kw">:</span></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">GITHUB_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Second, you need to create a <code>requirements.txt</code> at the root of the repository, listing all dependencies required to run your code snippets.</p>
 <p>You then need to initialize the publishing process using the following command:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Select “GitHub Pages” as the provider, and then say “Yes” when asked to publish on the given URL.</p>
 <p>The deployment will now start by creating a new branch <code>gh-pages</code> by pushing all your material to the URL and you can see it in your browser.</p>
-<p>Finally, do not forget to commit your changes to the <code>main</code> branch as well by</p>
+<p>Finally, do not forget to commit your changes to the <code>main</code> branch.</p>
 
 
 
