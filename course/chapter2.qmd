@@ -62,6 +62,9 @@ jobs:
 
 ```
 
+Second, you need to create a `requirements.txt` at the root of the repository, listing all dependencies required to run
+your code snippets.
+
 You then need to initialize the publishing process using the following command:
 
 ```bash
@@ -71,4 +74,4 @@ Select "GitHub Pages" as the provider, and then say "Yes" when asked to publish 
 
 The deployment will now start by creating a new branch `gh-pages` by pushing all your material to the URL and you can see it in your browser.
 
-Finally, do not forget to commit your changes to the `main` branch as well by
+Finally, do not forget to commit your changes to the `main` branch.
