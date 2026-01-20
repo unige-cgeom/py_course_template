@@ -46,7 +46,7 @@ displayed on the course homepage.
 
 ## Live Examples
 
-- [SPACE-GEOLOGY (2026)]()https://github.com/unige-cgeom/SPACE-GEOLOGY/. The course is 
+- [SPACE-GEOLOGY (2026)](https://github.com/unige-cgeom/SPACE-GEOLOGY/). The course is 
 [published online](https://unige-cgeom.github.io/SPACE-GEOLOGY/) using GitHub automatic deployment workflows.
 
 More examples will follow!
