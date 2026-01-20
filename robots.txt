@@ -1,0 +1,1 @@
+Sitemap: https://unige-cgeom.github.io/py_course_template/sitemap.xml
