@@ -1,0 +1,70 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course Template using Python",
+    "section": "",
+    "text": "Briefly describe what the course is about."
+  },
+  {
+    "objectID": "index.html#welcome-to-this-new-course",
+    "href": "index.html#welcome-to-this-new-course",
+    "title": "Course Template using Python",
+    "section": "",
+    "text": "Briefly describe what the course is about."
+  },
+  {
+    "objectID": "index.html#learning-objective",
+    "href": "index.html#learning-objective",
+    "title": "Course Template using Python",
+    "section": "Learning Objective",
+    "text": "Learning Objective\nDefine what students will gain by following this course"
+  },
+  {
+    "objectID": "index.html#course-structure",
+    "href": "index.html#course-structure",
+    "title": "Course Template using Python",
+    "section": "Course Structure",
+    "text": "Course Structure\nInsert here a schedule and syllabus for the course"
+  },
+  {
+    "objectID": "index.html#more-information",
+    "href": "index.html#more-information",
+    "title": "Course Template using Python",
+    "section": "More information",
+    "text": "More information\nAdd contact details, external links and useful resources here"
+  },
+  {
+    "objectID": "course/chapter1.html",
+    "href": "course/chapter1.html",
+    "title": "Chapter I",
+    "section": "",
+    "text": "Populate your file with course content, figures and code snippets directly.\nFor basic Markdown synthax tutorials, refer to the Quarto Docs\n\n\nTo insert figures, use the following syntax\n![UNIGE](images/unige.png)\nThis will display your image as:\n\n\n\nUNIGE logo\n\n\nNB: to make sure the caption is aligned with the logo, create a styles.css file and add the following:\nfigcaption {\n  text-align: center;\n}\nAnd reference it in your YAML header:\n---\ntitle: \"Chapter I\"\nformat:\n  html:\n    css: styles.css\n---\n\n\n\nTo insert code snippets, use the following syntax:\n\n```{python}\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n\n\n\n\n\n\n\nThis code will be executed when compiling the documents, and the plot will be displayed below the code. If you just want to show the code snippet without executing it, you should add ““#| eval: false” :\n\n```{python}\n#| eval: false\n\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n\n\n\nTo preview the content, you can use the “Preview” button if you are working with VS Code.\nAlternatively, if you prefer using the command line, navigate to your project and type in:\nquarto preview .\\index.qmd\nFor a guide on how to deploy the course, go to Chapter 2",
+    "crumbs": [
+      "Course",
+      "Chapter I"
+    ]
+  },
+  {
+    "objectID": "course/chapter1.html#adding-content",
+    "href": "course/chapter1.html#adding-content",
+    "title": "Chapter I",
+    "section": "",
+    "text": "Populate your file with course content, figures and code snippets directly.\nFor basic Markdown synthax tutorials, refer to the Quarto Docs\n\n\nTo insert figures, use the following syntax\n![UNIGE](images/unige.png)\nThis will display your image as:\n\n\n\nUNIGE logo\n\n\nNB: to make sure the caption is aligned with the logo, create a styles.css file and add the following:\nfigcaption {\n  text-align: center;\n}\nAnd reference it in your YAML header:\n---\ntitle: \"Chapter I\"\nformat:\n  html:\n    css: styles.css\n---\n\n\n\nTo insert code snippets, use the following syntax:\n\n```{python}\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n\n\n\n\n\n\n\nThis code will be executed when compiling the documents, and the plot will be displayed below the code. If you just want to show the code snippet without executing it, you should add ““#| eval: false” :\n\n```{python}\n#| eval: false\n\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n\n\n\nTo preview the content, you can use the “Preview” button if you are working with VS Code.\nAlternatively, if you prefer using the command line, navigate to your project and type in:\nquarto preview .\\index.qmd\nFor a guide on how to deploy the course, go to Chapter 2",
+    "crumbs": [
+      "Course",
+      "Chapter I"
+    ]
+  },
+  {
+    "objectID": "course/chapter2.html",
+    "href": "course/chapter2.html",
+    "title": "Chapter II",
+    "section": "",
+    "text": "Once happy with how the preview looks, it is time to deploy the course on a webpage that is available to everyone, not just a local rendering.\nWe will use GitHub Actions to automatically deploy a web page based on the .qmd files we have created.\nFirst, you need to create a file:\n.github\\workflows\\publish.yml\non:\n  workflow_dispatch:\n  push:\n    branches: main\n\nname: Quarto Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Render and Publish\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}",
+    "crumbs": [
+      "Course",
+      "Chapter II"
+    ]
+  }
+]
